@@ -1,0 +1,142 @@
+:root {
+  --cream: #fdf6ec;
+  --paper: #ffffff;
+  --rust: #b85c38;
+  --rust-soft: #e8a87c;
+  --cocoa: #5b4636;
+  --granite: #8a7a6e;
+  --line: #e3d3c0;
+  --teal: #4e7a6a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--cocoa);
+  background: var(--cream);
+  line-height: 1.6;
+}
+
+.wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 3rem;
+}
+
+.hero {
+  text-align: center;
+  padding: 1rem 0 2rem;
+}
+
+.sun-doodle {
+  font-size: 2.2rem;
+}
+
+.hero h1 {
+  font-size: clamp(1.7rem, 4vw, 2.6rem);
+  margin: 0.4rem 0 0.6rem;
+  color: var(--rust);
+}
+
+.tagline {
+  font-size: 1.15rem;
+  font-style: italic;
+  margin: 0 auto;
+  max-width: 40em;
+}
+
+.hero-note {
+  color: var(--granite);
+  margin-top: 0.6rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.card {
+  background: var(--paper);
+  border: 1.5px solid var(--line);
+  border-radius: 12px;
+  padding: 1.3rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 6px rgba(91, 70, 54, 0.06);
+}
+
+.card h2 {
+  font-size: 1.15rem;
+  margin: 0 0 0.5rem;
+  color: var(--cocoa);
+}
+
+.card p {
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+  color: var(--granite);
+  flex-grow: 1;
+}
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  padding: 0.5rem 1.1rem;
+  border-radius: 8px;
+  background: var(--rust);
+  color: var(--cream);
+  text-decoration: none;
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+  font-size: 0.9rem;
+  transition: background 0.15s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  background: var(--cocoa);
+}
+
+.how,
+.tips {
+  background: var(--paper);
+  border: 1.5px solid var(--line);
+  border-radius: 12px;
+  padding: 1.4rem 1.6rem;
+  margin: 1.5rem 0;
+}
+
+.how h2,
+.tips h2 {
+  margin-top: 0;
+  color: var(--rust);
+  font-size: 1.25rem;
+}
+
+footer {
+  text-align: center;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.92rem;
+}
+
+footer a {
+  color: var(--rust);
+}
+
+.license {
+  color: var(--granite);
+  font-size: 0.85rem;
+}
+
+@media print {
+  .btn {
+    display: none;
+  }
+}
